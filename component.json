@@ -1,0 +1,10 @@
+{
+  "name": "decoratable",
+  "version": "0.0.1",
+  "description": "define decoratable function. like connect middleware.",
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
+ 
