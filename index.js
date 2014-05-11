@@ -14,11 +14,11 @@ function decoratable(fn) {
    * decoratable function.
    */
   var d = function() {
-    fn = bindWith(fn, this);
+    var next = bindWith(fn, this);
     for (var i = 0; i < fns.length; i++) {
-      fn = bindWith(fns[i], this, fn);
+      next = bindWith(fns[i], this, next);
     }
-    return fn.apply(this, arguments);
+    return next.apply(this, arguments);
   };
 
   /**
